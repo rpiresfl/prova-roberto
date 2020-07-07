@@ -28,7 +28,7 @@ public class MaterialDAO {
 	}
 
 	public List<Material> listAll() {
-		return em.createQuery("select m from material m order by m.code", Material.class).getResultList();
+		return em.createQuery("select * from material m order by m.code", Material.class).getResultList();
 	}
 
 	public Material findById(int reg) {

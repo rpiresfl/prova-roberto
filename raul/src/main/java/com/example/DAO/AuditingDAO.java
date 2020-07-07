@@ -28,7 +28,7 @@ public class AuditingDAO {
 	}
 
 	public List<Auditing> listAll() {
-		return em.createQuery("select s from auditing s order by s.identifier", Auditing.class).getResultList();
+		return em.createQuery("select * from auditing s order by s.identifier", Auditing.class).getResultList();
 	}
 
 	public Auditing findById(int reg) {
